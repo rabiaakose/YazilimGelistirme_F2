@@ -3,3 +3,5 @@ script:
   - "mvn -f FinalDers2/pom.xml clean install cobertura:cobertura"
 jdk:
   -oraclejdk8
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
